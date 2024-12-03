@@ -38,7 +38,7 @@ describe('LoginComponent', () => {
   });
 
   it('should launch confetti with correct parameters', () => {
-    const confettiSpy = spyOn(confetti, 'default');
+    const confettiSpy = spyOn(confetti, 'default' as any);
     component.launchConfetti();
     expect(confettiSpy).toHaveBeenCalledWith({
       particleCount: 100,
